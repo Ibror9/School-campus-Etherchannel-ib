@@ -1,0 +1,22 @@
+school-campus-etherchannel/
+│
+├── README.md
+├── LICENSE
+├── .gitignore
+│
+├── Packet-Tracer/
+│   └── 26-1 EtherChannel Configuration.pkt
+│
+├── Images/
+│   └── topology.png
+│
+├── Configurations/
+│   ├── CD1.txt
+│   ├── CD2.txt
+│   ├── ACC3.txt
+│   └── ACC4.txt
+│
+└── Documentation/
+    ├── EtherChannel.md
+    ├── Verification.md
+    └── Troubleshooting.md
