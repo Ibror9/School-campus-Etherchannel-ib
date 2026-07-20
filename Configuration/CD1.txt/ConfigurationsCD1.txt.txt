@@ -1,0 +1,124 @@
+CD1#show run
+Building configuration...
+
+Current configuration : 1958 bytes
+!
+version 12.2
+no service timestamps log datetime msec
+no service timestamps debug datetime msec
+no service password-encryption
+!
+hostname CD1
+!
+!
+!
+!
+!
+!
+spanning-tree mode pvst
+spanning-tree extend system-id
+spanning-tree vlan 1-1005 priority 24576
+!
+interface Port-channel1
+ description link to Acc3
+ switchport trunk native vlan 199
+ switchport mode trunk
+!
+interface Port-channel2
+ description to link ACC4
+ switchport trunk native vlan 199
+ switchport mode trunk
+!
+interface Port-channel3
+ description link to CD2
+ switchport trunk native vlan 199
+ switchport mode trunk
+!
+interface FastEthernet0/1
+!
+interface FastEthernet0/2
+!
+interface FastEthernet0/3
+!
+interface FastEthernet0/4
+!
+interface FastEthernet0/5
+!
+interface FastEthernet0/6
+!
+interface FastEthernet0/7
+!
+interface FastEthernet0/8
+!
+interface FastEthernet0/9
+!
+interface FastEthernet0/10
+!
+interface FastEthernet0/11
+!
+interface FastEthernet0/12
+!
+interface FastEthernet0/13
+!
+interface FastEthernet0/14
+!
+interface FastEthernet0/15
+!
+interface FastEthernet0/16
+!
+interface FastEthernet0/17
+!
+interface FastEthernet0/18
+!
+interface FastEthernet0/19
+!
+interface FastEthernet0/20
+!
+interface FastEthernet0/21
+ switchport trunk native vlan 199
+ switchport mode trunk
+ channel-group 2 mode desirable
+!
+interface FastEthernet0/22
+ switchport trunk native vlan 199
+ switchport mode trunk
+ channel-group 2 mode desirable
+!
+interface FastEthernet0/23
+ switchport trunk native vlan 199
+ switchport mode trunk
+ channel-group 1 mode active
+!
+interface FastEthernet0/24
+ switchport trunk native vlan 199
+ switchport mode trunk
+ channel-group 1 mode active
+!
+interface GigabitEthernet0/1
+ switchport trunk native vlan 199
+ switchport mode trunk
+ channel-group 3 mode on
+!
+interface GigabitEthernet0/2
+ switchport trunk native vlan 199
+ switchport mode trunk
+ channel-group 3 mode on
+!
+interface Vlan1
+ no ip address
+ shutdown
+!
+!
+!
+!
+line con 0
+!
+line vty 0 4
+ login
+line vty 5 15
+ login
+!
+!
+!
+!
+end
